@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.geekbrains.march.chat.client.Controller">
+    <HBox fx:id="loginPanel">
+        <TextField fx:id="loginField" onAction="#login" prefHeight="25.0" prefWidth="150.0" promptText="Укажите свой логин" HBox.hgrow="ALWAYS" />
+      <TextField fx:id="password" promptText="Укажите пароль" HBox.hgrow="ALWAYS" />
+        <Button onAction="#login" text="Войти" />
+    </HBox>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <TextArea fx:id="msgArea" editable="false" wrapText="true" HBox.hgrow="ALWAYS" />
+        <ListView fx:id="clientsList" maxWidth="150" minWidth="150" prefWidth="150" />
+    </HBox>
+
+    <HBox fx:id="msgPanel">
+        <TextField fx:id="msgField" onAction="#sendMsg" promptText="Введите сообщение" HBox.hgrow="ALWAYS" />
+        <Button onAction="#sendMsg" text="Отправить" />
+      <Button fx:id="logOutPanel" mnemonicParsing="false" onMouseClicked="#logOut" text="Logout" />
+    </HBox>
+</VBox>
